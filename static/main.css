@@ -1,0 +1,166 @@
+.outerbox{
+    height:515px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background:rgba(0,0,0,0.5) url(./bgg.jpeg);
+    background-size: cover;
+    box-shadow: 2px 2px 4px 6px black;
+    border-radius: 20px;
+}
+.out{
+    height:515px;
+    width: 100%;
+    padding:15px
+}
+li{
+    text-decoration: none;
+}
+
+.leftbox{
+    height: 300px;
+    width: 50%;
+    position:absolute;
+    left:40px;
+    top:120px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:900;
+    color:black;
+    
+}
+
+.rightbox{
+    height: 400px;
+    width: 40%;
+    position:absolute;
+    right: 50px;
+    top:50px;
+    border-radius: 50%;
+}
+.span{
+    color:red;
+    text-shadow: 1px 3px 4px greenyellow;
+}
+
+/* @media (max-width:640px) {
+    .outerbox{
+        flex-direction: column;
+        height: 800px;
+        width: 100%;
+        font-size: medium;
+    }
+    .out{
+        height: 800px;
+    }
+}
+
+@media (min-width:640px) {
+    .outerbox{
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+    }
+} */
+
+#me{
+    background-color: red;
+    height: 30px;
+    width: 150px;
+}
+
+/* About Page */
+
+.about_outer{
+    height: 400px;
+    width: 900px;
+    position: absolute;
+    left:180px;
+    top:120px;
+    display: flex;
+    flex-direction: row;
+}
+
+.about_left{
+    height: 400px;
+    width: 300px;
+    position: relative;
+
+}
+.about_img{
+    height: 320px;
+    width: 250px;
+    box-shadow: 0px 0px 0px 0px red, -17px 16px 0px white, -18px 17px 18px red, 34px 4px 0px white;
+    position: absolute;
+    top:30px;
+    left:35px
+}
+
+.about_right{
+    height: 400px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right_out{
+    height: 350px;
+    width: 550px;
+}
+.about_right_second{
+    height: 275px;
+    width: 550px;
+}
+
+/* Projects */
+
+.hello{
+    color: blanchedalmond;
+}
+
+/* mediaquery */
+/* main.css */
+
+/* Styles for larger screens */
+.out {
+    padding: 20px;
+  }
+  
+  .outerbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .leftbox {
+    flex: 1;
+    padding-right: 20px;
+    text-align: center;
+  }
+  
+  .rightbox {
+    flex: 1;
+    padding-left: 20px;
+    text-align: center;
+  }
+  
+  /* Styles for smaller screens */
+  @media only screen and (max-width: 767px) {
+    .outerbox {
+      flex-direction: column;
+    }
+  
+    .leftbox,
+    .rightbox {
+      flex: none;
+      width: 100%;
+      padding: 0;
+      text-align: center;
+    }
+  
+    .rightbox img {
+      border-radius: 50%; /* Making the image circular on smaller screens */
+    }
+  }
+  

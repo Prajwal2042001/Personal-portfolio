@@ -1,0 +1,18 @@
+{% extends "start.html" %}
+{% block title %} About {% endblock %}
+
+{% block body %}
+{%load static%}
+<div class="about_outer">
+    <div class="about_left">
+        <img class="about_img" src="{% static '/about.jpg' %}">
+    </div>
+    <div class="about_right">
+        <div class="right_out">
+            <div class="about_right_first"><h1>ABOUT <span style="color: red;">ME</span></h1><h6>Web Developer/Full-stack Developer</h6></div>
+            <div class="about_right_second"><p>Hello! My name is Prajwal R and I'm an Full-stack developer. I'm currently staying in Bangalore, India. I've done my Bachelor's of Engineering in Information Science at East West Institute of Technology and PUC at RNS PU College. In addition to that I've done course at Pyspiders on Full-stack development. I'm currently looking for the job in well reputed company which matches my skills and intrests.</p>
+                <button style="background-color: red; margin-left: 180px; margin-top: 25px;"><a href="/static/Prajwal R resume.pdf" download style="color: beige; text-decoration: none;">Download Resume</a></button></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

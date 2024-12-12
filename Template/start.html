@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        {% block title %}
+            Home
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static './main.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><span style="color: red">P</span>RAJU</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="start">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects">Projects</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact">Contact</a>
+          </li>
+        </ul>
+        <div class="nav-item" style="margin-right: 10px; display: flex; flex-direction: row; gap: 5px; align-items: center;">
+            {% if request.user.is_authenticated %}
+                <p style="margin-top: 15px;"> <span style="color: red;">{{ request.user.username }}</span>, You are Welcome!</p>
+            {% endif %}
+        <div class="nav-item" style="margin-left: 5px;">
+          <a href="{% url 'logout' %}" style="text-decoration: none;"><button style="background-color: red; color: azure; border: none;">LOGOUT</button></a>
+        </div>
+      </div>
+    </nav>
+    {% block body %}
+    <!-- DP -->
+    <div class="out">
+    <div class="outerbox">
+      <div class="leftbox">
+        <h1 style="height: 80%; width: 100%; font-size: 4.5rem; color: black;">Hi,<br>I'm <span class="span">P</span>rajwal R,<br>web developer,</h1>
+        <p style="color: white;">basically a Fullstack developer.</p>
+        <button id="me"><a href="about" style="color: beige; text-decoration: none;">Know About Me</a></button>
+      </div>
+      <div class="rightbox">
+        <img src="{% static '/dp.jpg'%}" height="400px" width="100%" style="border-radius: 100%;">
+      </div>
+    </div>
+    </div>
+
+
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  </body>
+</html>
